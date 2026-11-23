@@ -1,0 +1,11 @@
+# Input and output data: CNPJ lists and results never go to the repository
+cnpjs.txt
+*.csv
+*.xlsx
+
+# Earlier Playwright attempt, rejected by hCaptcha; kept local only
+consulta_simples.py
+consultar.bat
+.perfil-navegador/
+
+__pycache__/

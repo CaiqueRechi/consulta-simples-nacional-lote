@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Consulta Simples Nacional em lote",
+  "version": "1.2",
+  "description": "Preenche os CNPJs da lista na consulta de optantes do Simples Nacional e guarda os resultados.",
+  "permissions": ["storage", "cookies"],
+  "host_permissions": ["https://consopt.www8.receita.fazenda.gov.br/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["https://consopt.www8.receita.fazenda.gov.br/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www8.receita.fazenda.gov.br/SimplesNacional/*"],
+      "js": ["focus-frame.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}

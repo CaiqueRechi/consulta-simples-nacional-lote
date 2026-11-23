@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 320px; font: 13px Arial, sans-serif; margin: 12px; }
+    h1 { font-size: 15px; margin: 0 0 8px; color: #2e7d32; }
+    button { width: 100%; margin-top: 6px; padding: 7px; cursor: pointer; }
+    #status { margin: 8px 0; padding: 6px; background: #f1f8e9; border-radius: 4px; }
+    small { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Consulta Simples Nacional</h1>
+  <label>Lista de CNPJs (.txt, um por linha):<br><input type="file" id="file" accept=".txt,.csv"></label>
+  <div id="status">Carregando...</div>
+  <button id="start">Iniciar / continuar</button>
+  <button id="pause">Pausar</button>
+  <button id="export">Exportar resultados (.csv)</button>
+  <button id="clear">Limpar tudo</button>
+  <p><small>Depois de iniciar, abra a página de consulta do Simples Nacional. O CNPJ vem preenchido; você só clica em Consultar.</small></p>
+  <script src="popup.js"></script>
+</body>
+</html>
